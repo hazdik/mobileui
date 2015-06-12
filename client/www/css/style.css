@@ -1,0 +1,13 @@
+/* Empty. Add your own CSS if you like */
+.content-stable{
+    background-color: #000;
+}
+
+.item-content {
+    background-color: #000 !important;
+}
+
+.img-list-thumb {
+    height: 50px !important;
+    margin-top: 15px;
+}

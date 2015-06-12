@@ -1,0 +1,23 @@
+<ion-view view-title="BMMs">
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-plus" data-ng-click="addBMM()"></button>
+    </ion-nav-buttons>
+    <ion-content class="content-stable">
+        <ion-list>
+            <ion-item class="item-remove-animate item-thumbnail-left item-icon-right content-stable"
+                      ng-repeat="bmm in bmms"
+                      type="item-text-wrap"
+                      href="#/tab/bmms/{{bmm.id}}">
+                <img ng-src="{{ bmm.thumbnail }}" ng-if="bmm.status" class="img-list-thumb">
+                <img ng-src="img/offline.png" ng-if="!bmm.status" class="img-list-thumb">
+                <h2 class="light">{{ bmm.title }}</h2>
+                <h4 class="light">{{ bmm.ip }}</h4>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+
+                <ion-option-button class="button-assertive" ng-click="remove(bmm)">
+                    Delete
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
